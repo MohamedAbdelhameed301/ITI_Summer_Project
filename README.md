@@ -2,7 +2,7 @@
 a very simple student management website using MVC
 include :
 * login page
-* rigister page
+* register page
 * add student
 * edit student data
 * delete student & review the data before the deletion
