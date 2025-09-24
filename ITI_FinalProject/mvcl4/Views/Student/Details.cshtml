@@ -1,0 +1,23 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Student Profile";
+    Layout = "NewLayout2";
+}
+
+<h1>Student Details</h1>
+
+   <dl class="student-info">
+        <dt>@Html.DisplayNameFor(e=>e.Id) : @Model.Id</dt>
+        <dt>@Html.DisplayNameFor(e=>e.Name) : @Model.Name</dt>
+        <dt>@Html.DisplayNameFor(e => e.Age) : @Model.Age</dt>
+        <dt>@Html.DisplayNameFor(e => e.Address) : @Model.Address</dt>
+        <dt>@Html.DisplayNameFor(e => e.Email) : @Model.Email</dt>
+        <dt>@Html.DisplayNameFor(e => e.DeptId) : @Model.DeptId</dt>
+        <dt>@Html.DisplayNameFor(e => e.Department.DeptName) : @Model.Department.DeptName</dt>
+    </dl>
+
+<div class="text-center mt-3">
+    <a asp-controller="Student" asp-action="GetAll" class="btn btn-primary">Back to list</a>
+</div>
+
+

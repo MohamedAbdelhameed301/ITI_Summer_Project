@@ -1,0 +1,24 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Check";
+    // Layout = "NewLayout2";
+}
+@* hello world from copy *@
+<h1>Review Before Delete</h1>
+
+<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">ID : @Model.Id</li>
+    <li class="list-group-item">Name : @Model.Name</li>
+    <li class="list-group-item">Age : @Model.Age</li>
+    <li class="list-group-item">Address : @Model.Address</li>
+    <li class="list-group-item">Email : @Model.Email</li>
+    <li class="list-group-item">Department ID : @Model.DeptId</li>
+    <li class="list-group-item">Department Name : @Model.Name</li>
+
+  </ul>
+  <div class="card-footer">
+   <a asp-controller="Student" asp-action="Delete" asp-route-Id="@Model.Id" class="btn btn-Danger" onclick="return confirm ('Are You Sure You Want To Delete @Model.Name ?');" >Delete</a>
+   <a asp-action="GetAll" class="btn btn-Primary">UnDo</a>
+</div>
+</div>

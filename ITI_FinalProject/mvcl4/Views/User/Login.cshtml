@@ -1,0 +1,67 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Login";
+    Layout = "LoginLayout 3";
+}
+
+<div class="login-container">
+    <h2 class="form-header">Login</h2>
+
+    <div asp-validation-summary="ModelOnly"></div>
+    <form asp-action="Login" method="post">
+        <!-- Email -->
+        <div class="form-group">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" type="email" placeholder="Enter your email" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <!-- Password -->
+        <div class="form-group">
+            <label asp-for="Password" class="form-label"></label>
+            <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" required />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+         <!-- Remember Me -->
+        @* <div class="form-group form-check">
+            <input asp-for="RememberMe" class="form-check-input" type="checkbox" />
+            <label asp-for="RememberMe" class="form-check-label">Remember Me</label>
+        </div>  *@
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Sign In</button>
+        </div>
+
+        <!-- Register Link -->
+        <div class="form-group">
+            <p>Don't have an account? <a asp-action="Register" class="register-link">Register here</a></p>
+        </div>
+    </form>
+</div>
+
+   @*------------------------------*@
+
+
+@* <div class="form-container">
+    <h2>Login</h2>
+    <form asp-action="Login" method="post">
+        <div class="mb-3">
+             <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" type="email" placeholder="Enter your email" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+           <label asp-for="Password" class="form-label"></label>
+            <input asp-for="Password" class="form-control" type="email" placeholder="Enter your email" required />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div> *@
+        @* <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="remember">
+            <label class="form-check-label" for="remember">Remember me</label>
+        </div> *@
+@*         <button type="submit" class="btn btn-primary w-100">Login</button>
+        <p class="text-muted text-center mt-3">Don't have an account? <a asp-action="Register" class="register-link">Register here</a></p>
+    </form>
+</div> *@
